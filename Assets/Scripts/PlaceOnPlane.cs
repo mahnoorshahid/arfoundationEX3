@@ -60,7 +60,7 @@ public class PlaceOnPlane : MonoBehaviour
     {
         totalcount = 0;
         instanceCounter = 0;
-        TotalText.text = "Total " + totalcount.ToString();
+        TotalText.text = "Total: " + totalcount.ToString();
     }
 
     void Update()
@@ -123,7 +123,7 @@ public class PlaceOnPlane : MonoBehaviour
     tapScript = GetComponent<tapToCollect>();
 
        //TotalText.text = "Total " + tapScript.count.ToString();
-        TotalText.text = "Total " + totalcount.ToString();
+        TotalText.text = "Total: " + totalcount.ToString();
     }
 
     void TimeDelay()
@@ -144,7 +144,7 @@ public class PlaceOnPlane : MonoBehaviour
     public void spawn()
     {
         var random = Random.Range(-2.0f, 2.0f);
-        var yrandom = Random.Range(-0.7f, 0.7f);
+        var yrandom = Random.Range(-0.5f, 0.5f);
         var tapScriptTwo = GetComponent<tapToCollect>();
 
         //tapScript.count++;

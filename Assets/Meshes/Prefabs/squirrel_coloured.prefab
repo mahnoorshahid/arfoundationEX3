@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1870229244}
   - component: {fileID: 1870229243}
   - component: {fileID: 1450868363982303186}
-  - component: {fileID: 3036356434745974270}
   - component: {fileID: 4812567057304855060}
+  - component: {fileID: 383554467989852755}
   m_Layer: 0
   m_Name: squirrel_coloured
   m_TagString: Untagged
@@ -97,21 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.059742283, y: 0.09630886, z: 0.15834972}
   m_Center: {x: -0.07266116, y: 0.047686435, z: -0.024274124}
---- !u!114 &3036356434745974270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870229242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b2fee1b6104a4cf2b878470fb34f2ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  count: 0
-  TotalText: {fileID: 0}
-  ObjectName: 
 --- !u!82 &4812567057304855060
 AudioSource:
   m_ObjectHideFlags: 0
@@ -209,3 +194,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &383554467989852755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870229242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b2fee1b6104a4cf2b878470fb34f2ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectName: 

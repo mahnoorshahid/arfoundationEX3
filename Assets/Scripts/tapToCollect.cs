@@ -83,7 +83,7 @@ public class tapToCollect : MonoBehaviour
         // placeOnPlane.spawn();
         placeOnPlane.totalcount++;
         placeOnPlane.instanceCounter--;
-        objectsToCollect.ObjectPicked(this.gameObject.name);
+        objectsToCollect.ObjectPicked(gameObject.name);
         Destroy(this.gameObject);
        // count++;
         
