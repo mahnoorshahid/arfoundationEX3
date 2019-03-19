@@ -13,8 +13,11 @@ public class tapToCollect : MonoBehaviour
 
     private ARSessionOrigin arOrigin;
     private PlaceOnPlane placeOnPlane;
-    public int count;
-    public Text TotalText;
+    private ObjectsToCollect objectsToCollect;
+
+
+  // public int count;
+    //public Text TotalText;
 
 
     public string ObjectName;
@@ -22,13 +25,15 @@ public class tapToCollect : MonoBehaviour
 
     private void Awake()
     {
-       
+        placeOnPlane = GameObject.Find("AR Session Origin").GetComponent<PlaceOnPlane>();
+        objectsToCollect = GameObject.Find("AR Session Origin").GetComponent<ObjectsToCollect>();
     }
+
 
     void Start()
     {
         arOrigin = FindObjectOfType<ARSessionOrigin>();
-        count = 0;
+        //count = 0;
         SetCountText();
 
     }
@@ -36,12 +41,12 @@ public class tapToCollect : MonoBehaviour
     void Update()
     {
    
-        RegisterModelTouch();
+        //RegisterModelTouch();
 
     }
 
 
-
+    //TAP TO COLLECT
     public void RegisterModelTouch()
     {
 
@@ -60,12 +65,13 @@ public class tapToCollect : MonoBehaviour
                 // gameObject.name
                 registerTouch();
               // SetCountText();
-                SetCountTextTotal();
-                count++;
-                //placeOnPlane.SetCountText();
-                placeOnPlane.instanceCounter++;
+             //  count++;
+                placeOnPlane.totalcount++;
+                placeOnPlane.SetCountText();
 
-                ObjectName = hit.collider.gameObject.name;
+       
+
+               //ObjectName = hit.collider.gameObject.name;
 
             }
         }
@@ -74,24 +80,22 @@ public class tapToCollect : MonoBehaviour
 
     public void registerTouch()
     {
-       // placeOnPlane.spawn();
+        // placeOnPlane.spawn();
+        placeOnPlane.totalcount++;
+        placeOnPlane.instanceCounter--;
+        objectsToCollect.ObjectPicked(this.gameObject.name);
         Destroy(this.gameObject);
-        count++;
-        placeOnPlane.instanceCounter++;
+       // count++;
+        
     }
 
     public void SetCountText()
     {
-      TotalText.text = "Total " + count.ToString();
-
+     //s TotalText.text = "Total " + count.ToString();
+        placeOnPlane.TotalText.text = "Total " + placeOnPlane.totalcount.ToString();
     }
 
-    public void SetCountTextTotal()
-    {
-        placeOnPlane.TotalText.text = "Total " + count.ToString();
-
-    }
-
+ 
 
 }
 

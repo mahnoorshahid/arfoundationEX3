@@ -37,23 +37,25 @@ public class ObjectsToCollect : MonoBehaviour
 
     void Start()
     {
-        arOrigin = FindObjectOfType<ARSessionOrigin>();
-        placeOnPlane = GetComponent<PlaceOnPlane>();
-        placeOnPlane = GetComponent<PlaceOnPlane>();
-        //var Name = placeOnPlane.ObjectName;
+        //arOrigin = FindObjectOfType<ARSessionOrigin>();
+        //placeOnPlane = GetComponent<PlaceOnPlane>();
+        //placeOnPlane = GetComponent<PlaceOnPlane>();
+        ////var Name = placeOnPlane.ObjectName;
 
-        string Name = tapScript.ObjectName;
+        //string Name = tapScript.ObjectName;
+
+        //ObjectPicked(name);
     }
 
 
 
-    public void ObjectPicked(string Name)
+    public void ObjectPicked(string name)
     {
-        switch (Name)
+        switch (name)
         {
             case "coyote":
                 coyoteNum++;
-                coyoteCount.text = coyoteCount.ToString();
+                coyoteCount.text = coyoteNum.ToString();
 
                 break;
 
@@ -65,29 +67,29 @@ public class ObjectsToCollect : MonoBehaviour
 
             case "beaver2":
                 beaverNum++;
-                beaverCount.text = beaverCount.ToString();
+                beaverCount.text = beaverNum.ToString();
 
                 break;
             case "bluejay 3":
                 bluejayNum++;
-                bluejayCount.text = bluejayCount.ToString();
+                bluejayCount.text = bluejayNum.ToString();
 
                 break;
 
             case "pigeon_coloured":
                 pigeonNum++;
-                pigeonCount.text = pigeonCount.ToString();
+                pigeonCount.text = pigeonNum.ToString();
 
                 break;
 
             case "raccoon":
                 raccoonNum++;
-                raccoonCount.text = raccoonCount.ToString();
+                raccoonCount.text = raccoonNum.ToString();
 
                 break;
             case "squirrel_coloured":
                 squirrelNum++;
-                squirrelCount.text = squirrelCount.ToString();
+                squirrelCount.text = squirrelNum.ToString();
 
                 break;
         }
@@ -96,18 +98,7 @@ public class ObjectsToCollect : MonoBehaviour
 
 
 
-    private void Update()
-    {
+  
 
-    }
-
-
-  public void GetRay()
-    {
-       
-      Destroy(this.gameObject);
-          
-       
-    }
 
 }

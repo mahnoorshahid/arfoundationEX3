@@ -493,7 +493,6 @@ GameObject:
   - component: {fileID: 1224053973455446826}
   - component: {fileID: 1491804034039118313}
   - component: {fileID: 4924667600101332811}
-  - component: {fileID: 4151640646828614872}
   m_Layer: 0
   m_Name: canada_goose
   m_TagString: Untagged
@@ -645,18 +644,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2fee1b6104a4cf2b878470fb34f2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4151640646828614872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5447562980858064138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f1fb5a9c2614d988590b5e34e6a0af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  count: 0
+  TotalText: {fileID: 0}
+  ObjectName: 
 --- !u!1 &5615469497650660754
 GameObject:
   m_ObjectHideFlags: 0
